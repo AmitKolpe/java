@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class NameList {
+    public static void main(String[] args) {
+        // Create a list to store names
+        ArrayList<String> names = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+
+        // Input: Add names to the list
+        System.out.println("Enter names (type 'stop' to finish):");
+        while (true) {
+            String name = scanner.nextLine();
+            if (name.equalsIgnoreCase("stop")) {
+                break;
+            }
+            names.add(name);
+        }
+
+        // Output: Display names
+        System.out.println("\nList of Names:");
+        for (String n : names) {
+            System.out.println(n);
+        }
+        
+        scanner.close();
+    }
+}
